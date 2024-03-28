@@ -1,0 +1,21 @@
+.links img {
+    width: 22px;
+    height: 22px;
+}
+
+.words_list {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+.words_list th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.words_list td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}

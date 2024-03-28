@@ -1,0 +1,4 @@
+word_1: Apple, word_2: Яблоко
+word_1: Orange, word_2: Апельсин
+word_1: Tea, word_2: Чай
+word_1: White, word_2: Белый

@@ -1,0 +1,75 @@
+{% extends 'mydictionary/base.html' %}
+
+{% block title %} Добавление слов {% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1>Форма для добавления слова</h1>
+            </div>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="row row-cols-auto">
+                <div class="container text-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="word1" placeholder="word1"
+                               aria-label="word1">
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="word2" placeholder="word2"
+                               aria-label="word2">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary" type="submit">Сохранить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="container-fluid">
+    <div class="container text-center">
+        <div class="container overflow-hidden text-center">
+            <div class="container overflow-hidden text-center">
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="p-3">
+                            <div class="links">
+                                {% load static %}
+                                <a href="{% url 'start_page' %}">
+                                    <img src="{% static 'mydictionary/img/istockphoto-1576035817-612x612.jpg' %}" alt=""
+                                    >
+                                    Главная страница
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <div class="links">
+                                {% load static %}
+                                <a href="{% url 'words_list' %}">
+                                    <img src="{% static 'mydictionary/img/apps.25379.13510798887412256.41dc31b4-4fcd-4094-9d73-1460d8b9b8db.png' %}"
+                                         alt="">
+                                    Словарь
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'mydictionary/base.html' %}
+
+{% block title %} My dictionary {% endblock %}
+
+{% block body %}
+{% block header %}
+<div class="container-fluid">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1>Англо-Русский словарь</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>На сайте вы можете добавлять новые слова в словарь, а также посмотреть список уже имеющихся слов</p>
+            </div>
+        </div>
+        <div class="row row-cols-auto">
+            <div class="container text-center">
+                <div class="card" style="width: 18rem;">
+                    {% load static %}
+                    <img src="{% static 'mydictionary/img/images.png' %}"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Добавление слова в словарь</h5>
+                        <a href="{% url 'add_word' %}" class="btn btn-primary">Добавить слово</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'mydictionary/img/apps.25379.13510798887412256.41dc31b4-4fcd-4094-9d73-1460d8b9b8db.png' %}"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Просмотр слов в словаре</h5>
+                        <a href="{% url 'words_list' %}" class="btn btn-primary">Посмотреть слова</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% endblock %}
