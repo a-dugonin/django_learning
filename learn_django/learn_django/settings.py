@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mydictionary.apps.MydictionaryConfig'
+    # 'mydictionary.apps.MydictionaryConfig'
+    'mongodb.apps.MongodbConfig'
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,7 @@ DATABASES = {
     }
 }
 
+MONGO_URL = "mongodb://127.0.0.1:27017/"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
